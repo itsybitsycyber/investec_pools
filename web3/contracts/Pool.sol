@@ -22,8 +22,8 @@ contract Pool {
 
     function deposit(uint amount) public {
         // checks 
-        require(IERC20(erc20).balanceOf(msg.sender) < amount, "Amount exceeds user balance");
-        require(target > getBalance(), "Target already met");
+        // require(IERC20(erc20).balanceOf(msg.sender) < amount, "Amount exceeds user balance");
+        // require(target > getBalance(), "Target already met");
 
         // effects 
         deposits[msg.sender] += amount;
@@ -73,7 +73,7 @@ contract Pool {
     function fulfillInvestment() public view { 
 
         // checks 
-        require(getBalance() > target, "Investment not fulfilled");
+        // require(getBalance() > target, "Investment not fulfilled");
 
         // effects
         fulfilled == true;

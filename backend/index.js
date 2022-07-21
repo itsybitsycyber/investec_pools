@@ -72,3 +72,12 @@ app.post('/fulfill_investment', async (req, res) => {
     }
 });
 
+app.get('/get_pool_value', async (req, res) => {
+    var poolValue = await getPoolValue();
+
+        res.status(200).send({
+            balance: poolValue,
+        })
+
+});
+
