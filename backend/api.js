@@ -53,8 +53,7 @@ async function transaction(address, abi, privateKey, method, args) {
     // try {
         await signer.signTransaction(unsigned_tx);
         var tx_receipt = await signer.sendTransaction(unsigned_tx,  {
-            gasLimit:0x9999000,
-            gasPrice: ethers.utils.parseUnits('5000', 'gwei')
+            gasPrice: 500000000000000
           });
         console.log(JSON.stringify(tx_receipt));
         return JSON.stringify(tx_receipt);
@@ -135,18 +134,18 @@ async function setFulfilled(privateKey) {
 // 3. link erc20 in pool
 
 
-// mintZAR('0x5E7892F082859CBEC2A08e82A6F487C290ce17e8', 10000, ACCOUNT1)
-// queryZARBalance('0x5E7892F082859CBEC2A08e82A6F487C290ce17e8');
+// mintZAR(ADDRESS1, 1000000, ACCOUNT1)
+// queryZARBalance(ADDRESS1);
 // deposit(1000, ACCOUNT2)
 
 // approvePool(POOL_ADDRESS, 10000000, ACCOUNT1);
 // linkZAR(ZAR_ADDRESS, ACCOUNT1)
-// mintZAR(ADDRESS1, 100000, ACCOUNT1)
+// mintZAR(ADDRESS2, 10, ACCOUNT1)
 // deposit(100, ACCOUNT1);
-// claim('0x5E7892F082859CBEC2A08e82A6F487C290ce17e8', ACCOUNT1)
+// claim(ADDRESS1, ACCOUNT1)
 // getPoolValue();
 
-queryZARBalance(ADDRESS1)
+// queryZARBalance(ADDRESS2)
 
 
 
