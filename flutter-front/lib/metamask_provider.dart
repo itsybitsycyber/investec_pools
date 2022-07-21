@@ -23,10 +23,10 @@ class MetaMaskProvider extends ChangeNotifier {
     print("Running connect method");
     if (isEnabled) {
       final accs = await ethereum!.requestAccount();
-      print("Connected address: ${accs.first}");
       if (accs.isNotEmpty) {
         currentAddress = accs.first;
       }
+      print("Connected address: ${currentAddress}");
       currentChain = await ethereum!.getChainId();
       notifyListeners();
     }
