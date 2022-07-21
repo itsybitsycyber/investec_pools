@@ -143,9 +143,10 @@ async function setFulfilled(privateKey) {
 // mintZAR(ADDRESS2, 10, ACCOUNT1)
 // deposit(100, ACCOUNT1);
 // claim(ADDRESS1, ACCOUNT1)
-// getPoolValue();
+getPoolValue();
 
 // queryZARBalance(ADDRESS2)
 
 
 
+module.exports = { queryZARBalance, mintZAR, approvePool, linkZAR, getPoolValue, newInvestmentContract, deposit, claim, setFulfilled}
